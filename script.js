@@ -1,15 +1,15 @@
 $(document).ready(function () {
     $("[data-toggle='tooltip']").tooltip();
     $("[data-toggle='popover']").popover();
-    $(".modal-body").load("https://artart241.github.io a.nav-link.active", function (response, status, request) {
-
-    });
 });
+
 $("#btnSelect").click(function (e) {
     let select = document.querySelector("select.custom-select")
-    let url = select.optoins[select.selectedIndex].values + " " + "div#answer";
+    let url = select.options[select.selectedIndex].value + " " + "div#answer";
+    document.querySelector("#msgLabel").innerHTML = "Сообщение от пользователя " + select.options[select.selectedIndex].innerHTML;
 
     $(".modal-body").load(url, function (response, status, request) {
         document.querySelector(".modal-body>div").id="";
+        $("#msgBox").modal("shows");
     });
 });
