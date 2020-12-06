@@ -9,7 +9,7 @@ $("#btnSelect").click(function (e) {
 
     let selectedUrl1 = select.options[select.selectedIndex].value;
     let selectedUser = select.options[select.selectedIndex].innerHTML;
-    document.querySelector("#msgLabel").innerHTML = "Сообщение от пользователя " + "<a href=''" + selectedUrl1 +  "target='_blank'>" + selectedUser + "</a>";
+    document.querySelector("#msgLabel").innerHTML = "Сообщение от пользователя " + "<a href='" + selectedUrl1 +  "' target='_blank'>" + selectedUser + "</a>";
 
     $(".modal-body").load(url, function (response, status, request) {
         document.querySelector(".modal-body>div").id="";
