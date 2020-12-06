@@ -13,3 +13,6 @@
     visibility: hidden;
     user-select: none;
 }
+body{
+    background-color: greenyellow;
+}
